@@ -2,7 +2,7 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: ['main'] # Cambia a 'master' si tu rama se llama así
+    branches: ['main']
 
 permissions:
   contents: read

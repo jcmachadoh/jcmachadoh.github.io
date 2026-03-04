@@ -1,6 +1,6 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
 
-const baseImg = '/src/assets/projects/';
+const baseImg = '/projects/';
 
 export const ProjectItem = ({ project, handleOpenModal }) => {
     return (

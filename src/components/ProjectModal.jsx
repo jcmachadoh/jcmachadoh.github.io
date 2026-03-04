@@ -7,6 +7,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 
+const baseImg = '/projects/'
+
 export const ProjectModal = ({ project, open, handleClose }) => {
     // Estado para saber qué imagen del array estamos mostrando en grande
     const [activeImage, setActiveImage] = useState(0);
@@ -43,7 +45,7 @@ export const ProjectModal = ({ project, open, handleClose }) => {
                         {/* Imagen Principal */}
                         <Box
                             component="img"
-                            src={project.images[activeImage]}
+                            src={baseImg + project.images[activeImage]}
                             alt={`Vista de ${project.name}`}
                             sx={{ width: '100%', height: 'auto', maxHeight: '400px', objectFit: 'cover', borderRadius: 2, mb: 2, boxShadow: 3 }}
                         />
@@ -54,7 +56,7 @@ export const ProjectModal = ({ project, open, handleClose }) => {
                                 <Box
                                     key={index}
                                     component="img"
-                                    src={img}
+                                    src={baseImg + img}
                                     onClick={() => setActiveImage(index)}
                                     sx={{
                                         width: '80px',
