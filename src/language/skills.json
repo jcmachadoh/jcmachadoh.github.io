@@ -1,0 +1,110 @@
+[
+    {
+        "id": "1",
+        "name": "JavaScript",
+        "type": "Language",
+        "overage": 100
+    },
+    {
+        "id": "2",
+        "name": "Python",
+        "type": "Language",
+        "overage": 75
+    },
+    {
+        "id": "3",
+        "name": "PHP",
+        "type": "Language",
+        "overage": 60
+    },
+    {
+        "id": "4",
+        "name": "React",
+        "type": "Framework",
+        "overage": 47
+    },
+    {
+        "id": "5",
+        "name": "React Native",
+        "type": "Framework",
+        "overage": 34
+    },
+    {
+        "id": "6",
+        "name": "NestJS",
+        "type": "Framework",
+        "overage": 50
+    },
+    {
+        "id": "7",
+        "name": "Express",
+        "type": "Framework",
+        "overage": 87
+    },
+    {
+        "id": "8",
+        "name": "Django",
+        "type": "Framework",
+        "overage": 68
+    },
+    {
+        "id": "9",
+        "name": "Laravel",
+        "type": "Framework",
+        "overage": 37
+    },
+    {
+        "id": "10",
+        "name": "PrestaShop",
+        "type": "Framework",
+        "overage": 95
+    },
+    {
+        "id": "11",
+        "name": "WordPress",
+        "type": "Framework",
+        "overage": 23
+    },
+    {
+        "id": "12",
+        "name": "MySQL",
+        "type": "Database",
+        "overage": 85
+    },
+    {
+        "id": "13",
+        "name": "PostgreSQL",
+        "type": "Database",
+        "overage": 90
+    },
+    {
+        "id": "14",
+        "name": "MongoDB",
+        "type": "Database",
+        "overage": 82
+    },
+    {
+        "id": "15",
+        "name": "Git",
+        "type": "Tool",
+        "overage": 40
+    },
+    {
+        "id": "16",
+        "name": "Docker",
+        "type": "Tool",
+        "overage": 50
+    },
+    {
+        "id": "17",
+        "name": "Prompts",
+        "type": "Tool",
+        "overage": 50
+    },
+    {
+        "id": "18",
+        "name": "Supabase",
+        "type": "Tool",
+        "overage": 50
+    }
+]

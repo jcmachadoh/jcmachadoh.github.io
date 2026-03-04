@@ -1,0 +1,86 @@
+[
+    {
+        "id": "1",
+        "name": "Clone do Facebook",
+        "smartDescription": "Clone completo do Facebook com autenticação, publicações em tempo real e sistema de amigos.",
+        "training": true,
+        "isOnline": true,
+        "githubUrl": "https://github.com/tu-usuario/facebook-clone",
+        "liveUrl": "https://tu-facebook-clone.vercel.app",
+        "images": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
+        "id": "2",
+        "name": "APK de Inventário",
+        "smartDescription": "Aplicativo móvel para gestão de inventário em tempo real com leitor de código de barras.",
+        "training": false,
+        "isOnline": false,
+        "githubUrl": "https://github.com/tu-usuario/apk-inventario",
+        "liveUrl": "",
+        "images": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Projeto Bargain",
+        "smartDescription": "Aplicativo de gestão integral para o registro de vendas e controle de estoque no comércio físico.",
+        "training": false,
+        "isOnline": true,
+        "githubUrl": "https://github.com/tu-usuario/proyecto-bargain",
+        "liveUrl": "https://bargain.com",
+        "images": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Loja Vivofacil",
+        "smartDescription": "E-commerce desenvolvido em PrestaShop com módulos personalizados para métodos de pagamento e envio locais.",
+        "training": false,
+        "isOnline": true,
+        "githubUrl": "",
+        "liveUrl": "https://vivofacil.com",
+        "images": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Web Matérias-Primas",
+        "smartDescription": "Site institucional e catálogo de produtos para uma empresa de distribuição de matérias-primas.",
+        "training": false,
+        "isOnline": true,
+        "githubUrl": "https://github.com/tu-usuario/web-materias",
+        "liveUrl": "https://materias-primas.com",
+        "images": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
+        "id": "6",
+        "name": "Gravador de Rádio",
+        "smartDescription": "Ferramenta que permite gravar transmissões de rádio online de forma programada e armazená-las na nuvem.",
+        "training": true,
+        "isOnline": true,
+        "githubUrl": "https://github.com/tu-usuario/radio-recorder",
+        "liveUrl": "https://radio-recorder.onrender.com",
+        "images": [
+            "1",
+            "2",
+            "3"
+        ]
+    }
+]

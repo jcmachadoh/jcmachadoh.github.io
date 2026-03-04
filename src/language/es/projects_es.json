@@ -1,0 +1,66 @@
+[
+    {
+        "id": "1",
+        "name": "Clone de Facebook",
+        "smartDescription": "Clon completo de Facebook con autenticación, publicaciones en tiempo real y sistema de amigos.",
+        "fullDescription": "Este proyecto es una réplica funcional de la interfaz y lógica básica de Facebook. Fue desarrollado para demostrar el dominio en el manejo de estados globales, autenticación segura de usuarios y bases de datos en tiempo real. Permite a los usuarios registrarse, iniciar sesión, interactuar con otros perfiles y publicar actualizaciones con contenido multimedia.",
+        "thumbnail": "facebookclone/principal.png",
+        "images": [
+            "facebookclone/1.png",
+            "facebookclone/2.png",
+            "facebookclone/3.png",
+            "facebookclone/4.png"
+        ],
+        "isOnline": true,
+        "githubUrl": "https://github.com/tu-usuario/facebook-clone",
+        "liveUrl": "https://tu-facebook-clone.vercel.app"
+    },
+    {
+        "id": "2",
+        "name": "APK de Inventario",
+        "smartDescription": "Aplicación móvil para la gestión de inventario en tiempo real con escáner de códigos de barras.",
+        "fullDescription": "Aplicación móvil nativa diseñada para optimizar el control de stock en almacenes. Integra la cámara del dispositivo para el escaneo rápido de códigos de barras o QR, sincronizando las entradas y salidas de mercancía directamente con una base de datos centralizada. Reduce el error humano y acelera las auditorías de inventario.",
+        "thumbnail": "inventario/principal.png",
+        "images": [
+            "inventario/1.png",
+            "inventario/2.png",
+            "inventario/3.png",
+            "inventario/4.png"
+        ],
+        "isOnline": false,
+        "githubUrl": "https://github.com/tu-usuario/apk-inventario",
+        "liveUrl": ""
+    },
+    {
+        "id": "3",
+        "name": "Proyecto Bargain",
+        "smartDescription": "Aplicación de gestión integral para el registro de ventas y control de stock en comercio físico.",
+        "fullDescription": "Sistema de Punto de Venta (POS) y administración creado a medida para el comercio Bargain. Facilita el registro diario de transacciones, la generación de reportes financieros mensuales y el seguimiento del inventario. Incluye un panel de administrador con gráficos interactivos para la toma de decisiones basada en datos.",
+        "thumbnail": "bargain/principal.png",
+        "images": [
+            "bargain/1.png",
+            "bargain/2.png",
+            "bargain/3.png",
+            "bargain/4.png"
+        ],
+        "isOnline": true,
+        "githubUrl": "https://github.com/tu-usuario/proyecto-bargain",
+        "liveUrl": "https://bargain.com"
+    },
+     {
+        "id": "3",
+        "name": "Proyecto VivoFacil",
+        "smartDescription": "Aplicación de gestión integral para el registro de ventas y control de stock en comercio físico.",
+        "fullDescription": "Sistema de Punto de Venta (POS) y administración creado a medida para el comercio Bargain. Facilita el registro diario de transacciones, la generación de reportes financieros mensuales y el seguimiento del inventario. Incluye un panel de administrador con gráficos interactivos para la toma de decisiones basada en datos.",
+        "thumbnail": "vivofacil/principal.png",
+        "images": [
+            "vivofacil/1.png",
+            "vivofacil/2.png",
+            "vivofacil/3.png",
+            "vivofacil/4.png"
+        ],
+        "isOnline": true,
+        "githubUrl": "https://github.com/tu-usuario/proyecto-bargain",
+        "liveUrl": "https://bargain.com"
+    }
+]

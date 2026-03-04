@@ -1,0 +1,86 @@
+[
+    {
+        "id": "1",
+        "name": "Facebook Clone",
+        "smartDescription": "Full Facebook clone featuring authentication, real-time posts, and a friend system.",
+        "training": true,
+        "isOnline": true,
+        "githubUrl": "https://github.com/tu-usuario/facebook-clone",
+        "liveUrl": "https://tu-facebook-clone.vercel.app",
+        "images": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Inventory APK",
+        "smartDescription": "Mobile application for real-time inventory management featuring a barcode scanner.",
+        "training": false,
+        "isOnline": false,
+        "githubUrl": "https://github.com/tu-usuario/apk-inventario",
+        "liveUrl": "",
+        "images": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Bargain Project",
+        "smartDescription": "Comprehensive management application for sales registration and stock control in physical retail.",
+        "training": false,
+        "isOnline": true,
+        "githubUrl": "https://github.com/tu-usuario/proyecto-bargain",
+        "liveUrl": "https://bargain.com",
+        "images": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Vivofacil Store",
+        "smartDescription": "E-commerce platform developed in PrestaShop with custom modules for local payment and shipping methods.",
+        "training": false,
+        "isOnline": true,
+        "githubUrl": "",
+        "liveUrl": "https://vivofacil.com",
+        "images": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Raw Materials Web",
+        "smartDescription": "Institutional website and product catalog for a raw materials distribution company.",
+        "training": false,
+        "isOnline": true,
+        "githubUrl": "https://github.com/tu-usuario/web-materias",
+        "liveUrl": "https://materias-primas.com",
+        "images": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
+        "id": "6",
+        "name": "Radio Recorder",
+        "smartDescription": "Tool that allows users to schedule recordings of online radio broadcasts and store them in the cloud.",
+        "training": true,
+        "isOnline": true,
+        "githubUrl": "https://github.com/tu-usuario/radio-recorder",
+        "liveUrl": "https://radio-recorder.onrender.com",
+        "images": [
+            "1",
+            "2",
+            "3"
+        ]
+    }
+]
