@@ -35,7 +35,13 @@ export const ProjectModal = ({ project, open, handleClose }) => {
 
             <DialogContent dividers>
                 {/* Descripción Completa */}
-                <Typography variant="body1" paragraph>
+                <Typography
+                    variant="body1"
+                    paragraph
+                    sx={{
+                        whiteSpace: 'pre-line',
+                        textAlign: 'justify'
+                    }}>
                     {project.fullDescription}
                 </Typography>
 

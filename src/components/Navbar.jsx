@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Menu, MenuItem } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Menu, MenuItem, Avatar } from '@mui/material';
 
 // Importamos los iconos
 import EmailIcon from '@mui/icons-material/Email';
-import Brightness4Icon from '@mui/icons-material/Brightness4'; 
-import Brightness7Icon from '@mui/icons-material/Brightness7'; 
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 import MenuIcon from '@mui/icons-material/Menu'; // <-- Icono de Menú Hamburguesa
 
 // Componentes y estado
 import LanguageSelector from './LanguageSelector';
 import { useLanguageStore } from '../store/useLanguage'; // Ajusta la ruta si es necesario
 import { translations } from '../language/translate';           // Ajusta la ruta si es necesario
+
+import flag from '../assets/flag.jpg'
 
 export default function Navbar({ onOpenContact, toggleTheme, isDarkMode }) {
   const { language } = useLanguageStore();
@@ -31,15 +33,17 @@ export default function Navbar({ onOpenContact, toggleTheme, isDarkMode }) {
     <AppBar position="sticky" elevation={1} color="inherit">
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-          
+
           {/* LOGO */}
-          <Typography variant="h6" fontWeight="bold" color="primary">
-            MiPortafolio
-          </Typography>
+          <Avatar
+            src={flag}
+            alt="Bandera"
+            sx={{ width: 40, height: 40, mr: 1 }}
+          />
 
           {/* CONTENEDOR DERECHO: Enlaces, Menú y Botones */}
           <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 0.5, md: 1 } }}>
-            
+
             {/* --- ENLACES VERSIÓN ESCRITORIO (Ocultos en móviles) --- */}
             <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1, mr: 1 }}>
               <Button color="inherit" href="#inicio" sx={{ textTransform: 'none', fontWeight: 600 }}>{t.home}</Button>
@@ -60,7 +64,7 @@ export default function Navbar({ onOpenContact, toggleTheme, isDarkMode }) {
               >
                 <MenuIcon />
               </IconButton>
-              
+
               {/* Desplegable del menú hamburguesa */}
               <Menu
                 anchorEl={anchorElNav}
@@ -85,7 +89,7 @@ export default function Navbar({ onOpenContact, toggleTheme, isDarkMode }) {
             </Box>
 
             {/* --- CONTROLES GLOBALES (Siempre visibles afuera) --- */}
-            
+
             {/* Selector de idioma */}
             <LanguageSelector />
 
@@ -93,13 +97,13 @@ export default function Navbar({ onOpenContact, toggleTheme, isDarkMode }) {
             <IconButton onClick={toggleTheme} color="inherit">
               {isDarkMode ? <Brightness7Icon /> : <Brightness4Icon />}
             </IconButton>
-            
+
             {/* --- BOTÓN DE CONTACTO DINÁMICO --- */}
-            
+
             {/* 1. Versión Escritorio: Botón con texto e icono */}
-            <Button 
-              variant="contained" 
-              color="primary" 
+            <Button
+              variant="contained"
+              color="primary"
               startIcon={<EmailIcon />}
               onClick={onOpenContact}
               sx={{ display: { xs: 'none', md: 'flex' }, borderRadius: '20px', ml: 1, textTransform: 'none', fontWeight: 'bold' }}
@@ -117,7 +121,7 @@ export default function Navbar({ onOpenContact, toggleTheme, isDarkMode }) {
             </IconButton>
 
           </Box>
-          
+
         </Toolbar>
       </Container>
     </AppBar>

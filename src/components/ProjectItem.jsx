@@ -37,7 +37,7 @@ export const ProjectItem = ({ project, handleOpenModal }) => {
                         WebkitLineClamp: 3,
                         WebkitBoxOrient: 'vertical',
                         overflow: 'hidden',
-                        textOverflow: 'ellipsis'
+                        textOverflow: 'ellipsis',
                     }}
                 >
                     {project.smartDescription}

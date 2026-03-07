@@ -1,14 +1,14 @@
 import { Container, Typography, Box, Button, ImageListItem, Avatar } from '@mui/material';
 import { useLanguageStore } from '../store/useLanguage';
 import { translations } from '../language/translate';
-import bandera from '../assets/flag.jpg';
+import avatar from '../assets/avatar.jpg';
 const Home = () => {
     const { language } = useLanguageStore();
     const t = translations[language].hero;
     return (
         <Container id="inicio" maxWidth="md" sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', py: 10 }}>
 
-            <Avatar sx={{ width: 120, height: 120, mx: 'auto', mb: 3 }} src={bandera} alt="Foto de perfil" />
+            <Avatar sx={{ width: 250, height: 250, mx: 'auto', mb: 3 }} src={avatar} alt="Foto de perfil" />
 
             <Typography variant="h3" fontWeight="bold" gutterBottom>
                 {t.greeting} <Box component="span" color="primary.main">José Carlos Machado Hernández</Box>

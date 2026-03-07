@@ -1,54 +1,55 @@
 import React, { useState } from 'react';
 import {
     Dialog, DialogTitle, DialogContent, DialogActions,
-    TextField, Button, IconButton, Typography, Alert
+    Typography, Button, IconButton, TextField, Box,
+    Switch, FormControlLabel, FormGroup
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import SendIcon from '@mui/icons-material/Send';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import EmailIcon from '@mui/icons-material/Email';
 
-export default function ContactModal({ open, handleClose }) {
-    // Manejamos el estado de la petición: '', 'loading', 'success', 'error'
-    const [status, setStatus] = useState('');
+const ContactModal = ({ open, handleClose }) => {
+    // Estados para guardar los datos del formulario
+    const [nombre, setNombre] = useState('');
+    const [mensaje, setMensaje] = useState('');
+    
+    // Estado para el Switch (true = WhatsApp, false = Email)
+    const [isWhatsApp, setIsWhatsApp] = useState(true);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setStatus('loading');
+    // TUS DATOS DE CONTACTO (Cámbialos por los tuyos)
+    const miNumeroWhatsApp = "5354722617"; 
+    const miCorreoElectronico = "jcmachadoh93@gmail.com"; 
 
-        const form = e.target;
-        const data = new FormData(form);
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Evita que la página se recargue
 
-        try {
-            // REEMPLAZA ESTA URL CON LA QUE TE DIO FORMSPREE
-            const response = await fetch('https://formspree.io/f/TU_ID_DE_FORMSPREE', {
-                method: 'POST',
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-
-            if (response.ok) {
-                setStatus('success');
-                form.reset(); // Limpia el formulario
-                // Esperamos 3 segundos para que el usuario lea el éxito y cerramos el modal
-                setTimeout(() => {
-                    setStatus('');
-                    handleClose();
-                }, 3000);
-            } else {
-                setStatus('error');
-            }
-        } catch (error) {
-            setStatus('error');
-            console.log(error);
+        if (isWhatsApp) {
+            // --- LÓGICA DE WHATSAPP ---
+            const textoBase = `¡Hola JC! Soy *${nombre}*.%0A%0A${mensaje}%0A%0AEnviado desde tu portafolio web.`;
+            const url = `https://wa.me/${miNumeroWhatsApp}?text=${textoBase}`;
+            window.open(url, '_blank');
+        } else {
+            // --- LÓGICA DE EMAIL ---
+            // encodeURIComponent asegura que los espacios y saltos de línea se lean bien en el correo
+            const asunto = encodeURIComponent(`Nuevo mensaje de ${nombre} (Desde Portafolio)`);
+            const cuerpo = encodeURIComponent(`Hola JC,\n\nSoy ${nombre}.\n\n${mensaje}\n\n---\nEnviado desde tu portafolio web.`);
+            const mailtoLink = `mailto:${miCorreoElectronico}?subject=${asunto}&body=${cuerpo}`;
+            
+            // Abrimos el cliente de correo del usuario
+            window.location.href = mailtoLink;
         }
+        
+        // Cerramos el modal y limpiamos el formulario
+        setNombre('');
+        setMensaje('');
+        handleClose();
     };
 
     return (
         <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>
             <DialogTitle sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <Typography variant="h6" component="span" fontWeight="bold">
-                    Envíame un mensaje
+                <Typography variant="h5" component="span" fontWeight="bold" color="primary">
+                    Contáctame
                 </Typography>
                 <IconButton onClick={handleClose}>
                     <CloseIcon />
@@ -57,26 +58,78 @@ export default function ContactModal({ open, handleClose }) {
 
             <form onSubmit={handleSubmit}>
                 <DialogContent dividers>
+                    
+                    {/* --- SWITCH MODERN0 --- */}
+                    <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3, p: 1, bgcolor: 'background.default', borderRadius: 2 }}>
+                        <FormGroup>
+                            <FormControlLabel 
+                                control={
+                                    <Switch 
+                                        checked={isWhatsApp} 
+                                        onChange={(e) => setIsWhatsApp(e.target.checked)} 
+                                        color="success"
+                                    />
+                                } 
+                                label={
+                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                        {isWhatsApp ? <WhatsAppIcon color="success" /> : <EmailIcon color="primary" />}
+                                        <Typography fontWeight="bold">
+                                            {isWhatsApp ? "Enviar por WhatsApp" : "Enviar por Email"}
+                                        </Typography>
+                                    </Box>
+                                }
+                            />
+                        </FormGroup>
+                    </Box>
 
-                    {/* Alertas de éxito o error */}
-                    {status === 'success' && <Alert severity="success" sx={{ mb: 2 }}>¡Mensaje enviado con éxito! Te responderé pronto.</Alert>}
-                    {status === 'error' && <Alert severity="error" sx={{ mb: 2 }}>Hubo un error al enviar. Por favor, intenta de nuevo.</Alert>}
+                    <Typography variant="body2" color="text.secondary" paragraph textAlign="center">
+                        {isWhatsApp 
+                            ? "Escribe tu mensaje y continuaremos la charla de forma rápida por WhatsApp." 
+                            : "Escribe tu mensaje y se abrirá tu aplicación de correo para enviármelo."}
+                    </Typography>
 
-                    {/* IMPORTANTE: Observa que agregamos la propiedad "name" a cada input */}
-                    <TextField fullWidth name="nombre" label="Tu Nombre" variant="outlined" margin="normal" required />
-                    <TextField fullWidth name="email" label="Tu Correo" type="email" variant="outlined" margin="normal" required />
-                    <TextField fullWidth name="mensaje" label="Mensaje" variant="outlined" margin="normal" multiline rows={4} required />
-
+                    <TextField
+                        fullWidth
+                        label="Tu Nombre o Empresa"
+                        variant="outlined"
+                        margin="normal"
+                        required
+                        value={nombre}
+                        onChange={(e) => setNombre(e.target.value)}
+                    />
+                    
+                    <TextField
+                        fullWidth
+                        label="¿De qué trata tu mensaje?"
+                        variant="outlined"
+                        margin="normal"
+                        multiline
+                        rows={4}
+                        required
+                        value={mensaje}
+                        onChange={(e) => setMensaje(e.target.value)}
+                    />
                 </DialogContent>
-                <DialogActions sx={{ p: 2 }}>
-                    <Button onClick={handleClose} color="inherit" disabled={status === 'loading'}>
+
+                <DialogActions sx={{ p: 2, justifyContent: 'flex-end' }}>
+                    <Button onClick={handleClose} color="inherit" sx={{ textTransform: 'none' }}>
                         Cancelar
                     </Button>
-                    <Button type="submit" variant="contained" color="primary" endIcon={<SendIcon />} disabled={status === 'loading'}>
-                        {status === 'loading' ? 'Enviando...' : 'Enviar Mensaje'}
+                    
+                    {/* Botón dinámico que cambia según el Switch */}
+                    <Button
+                        type="submit"
+                        variant="contained"
+                        color={isWhatsApp ? "success" : "primary"}
+                        startIcon={isWhatsApp ? <WhatsAppIcon /> : <EmailIcon />}
+                        sx={{ textTransform: 'none', fontWeight: 'bold' }}
+                    >
+                        {isWhatsApp ? "Enviar por WhatsApp" : "Preparar Email"}
                     </Button>
                 </DialogActions>
             </form>
         </Dialog>
     );
-}
+};
+
+export default ContactModal;
