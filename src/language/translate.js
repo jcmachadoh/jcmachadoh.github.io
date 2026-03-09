@@ -9,8 +9,8 @@ export const translations = {
         },
         hero: {
             greeting: 'Hola, soy',
-            role: 'Desarrollador / Tu Profesión Aquí',
-            description: 'Transformo ideas en soluciones digitales elegantes y eficientes.',
+            role: 'Ingeniero en Ciencias Informáticas / Desarrollador Full Stack',
+            description: 'Transformo ideas en soluciones digitales elegantes y eficientes. Lo hago bien, porque amo lo que hago.',
             btnProjects: 'Ver mis proyectos',
             btnCV: 'Descargar CV (PDF)'
         },
@@ -22,7 +22,7 @@ export const translations = {
             contact: 'Contacto'
         },
         aboutMe: {
-            description: 'Soy un profesional apasionado por el desarrollo de software, con experiencia comprobable en la creación de soluciones eficientes y escalables. Me encanta resolver problemas complejos y estar en constante aprendizaje.',
+            description: 'Soy un Desarrollador Full-Stack especializado en el ecosistema JavaScript, bases de datos y desarrollo e-commerce. Potencio mi ciclo de trabajo utilizando Inteligencia Artificial y Prompt Engineering avanzado, lo que me permite resolver problemas complejos en tiempo récord, optimizar arquitecturas y escribir código más limpio. Mi enfoque es traducir necesidades de negocio en soluciones digitales altamente eficientes y escalables.',
             languages: 'Lenguajes de programación',
             frameworks: 'Frameworks y Librerías',
             databases: 'Bases de datos',
@@ -52,7 +52,7 @@ export const translations = {
             contact: 'Contact'
         },
         aboutMe: {
-            description: 'I am a professional passionate about software development, with proven experience in creating efficient and scalable solutions. I love solving complex problems and constantly learning new technologies.',
+            description: 'I am a Full-Stack Developer specializing in the JavaScript ecosystem, databases, and e-commerce development. I supercharge my workflow using Artificial Intelligence and advanced Prompt Engineering, allowing me to solve complex problems in record time, optimize architectures, and write cleaner code. My focus is on translating business needs into highly efficient and scalable digital solutions.',
             languages: 'Programming Languages',
             frameworks: 'Frameworks & Libraries',
             databases: 'Databases',
@@ -82,7 +82,7 @@ export const translations = {
             contact: 'Contato'
         },
         aboutMe: {
-            description: 'Sou um profissional apaixonado por desenvolvimento de software, com experiência comprovada na criação de soluções eficientes e escaláveis. Adoro resolver problemas complexos e estar em constante aprendizado.',
+            description: 'Sou um Desenvolvedor Full-Stack especializado no ecossistema JavaScript, bancos de dados e desenvolvimento de e-commerce. Potencializo meu fluxo de trabalho utilizando Inteligência Artificial e Engenharia de Prompts avançada, o que me permite resolver problemas complexos em tempo recorde, otimizar arquiteturas e escrever um código mais limpo. Meu foco é traduzir as necessidades do negócio em soluções digitais altamente eficientes e escaláveis.',
             languages: 'Linguagens de Programação',
             frameworks: 'Frameworks e Bibliotecas',
             databases: 'Bancos de Dados',

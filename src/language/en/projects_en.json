@@ -2,85 +2,80 @@
     {
         "id": "1",
         "name": "Facebook Clone",
-        "smartDescription": "Full Facebook clone featuring authentication, real-time posts, and a friend system.",
-        "training": true,
+        "smartDescription": "Facebook frontend clone developed with React, TypeScript, and Tailwind CSS. Implements global state management with Zustand, dynamic routing, dark mode, internationalization, and responsive design.",
+        "fullDescription": "Complete development of a Facebook frontend clone, focused on performance, clean architecture, and user experience (UX). Built with React and TypeScript, using Vite as a bundler and Tailwind CSS for a fluid Mobile-First design, including native support for Dark Mode and adaptable menus. \n The architecture stands out for its global state management with Zustand, notifications, and language. A scalable and strictly typed internationalization (i18n) system was implemented. Navigation uses React Router DOM with Lazy Loading to optimize load times. \n Technically, it demonstrates mastery of React Hooks: useMemo to optimize real-time search filtering, and useRef for complex interface handling. It includes dynamic views connected to data mocks, simulating an interactive post wall and a messaging system based on URL parameters. \n Finally, the project integrates real DevOps practices through an automated Continuous Integration and Continuous Deployment (CI/CD) pipeline with GitHub Actions, publishing to production on GitHub Pages seamlessly.",
+        "thumbnail": "facebookclone/principal.png",
+        "images": [
+            "facebookclone/1.png",
+            "facebookclone/2.png",
+            "facebookclone/3.png",
+            "facebookclone/4.png"
+        ],
         "isOnline": true,
         "githubUrl": "https://github.com/tu-usuario/facebook-clone",
-        "liveUrl": "https://tu-facebook-clone.vercel.app",
-        "images": [
-            "1",
-            "2",
-            "3"
-        ]
+        "liveUrl": "https://tu-facebook-clone.vercel.app"
     },
     {
         "id": "2",
-        "name": "Inventory APK",
-        "smartDescription": "Mobile application for real-time inventory management featuring a barcode scanner.",
-        "training": false,
-        "isOnline": false,
-        "githubUrl": "https://github.com/tu-usuario/apk-inventario",
-        "liveUrl": "",
+        "name": "Educational APK - Bronchial Asthma",
+        "smartDescription": "Mobile application developed in React Native for the Guantánamo Pediatric Hospital, focused on medical consultation and education about bronchial asthma.",
+        "fullDescription": "Mobile Developer | XETID\n\nI led the migration of an educational multimedia platform to a mobile application (APK) focused on bronchial asthma, specifically designed for the Guantánamo Pediatric Teaching Hospital. My main contributions were:\n\n• Mobile Development: Creation of the application from scratch using React Native, ensuring fluid performance and a modern user experience.\n• Health Digitalization: Transformation and adaptation of traditional multimedia materials into an interactive pocket tool.\n• Educational Impact: Delivery of a stable technological solution, actively adopted by medical students and specialists for quick consultation and academic training.",
+        "thumbnail": "asma-bronquial/principal.png",
         "images": [
-            "1",
-            "2",
-            "3"
-        ]
+            "asma-bronquial/1.png",
+            "asma-bronquial/2.png",
+            "asma-bronquial/3.png",
+            "asma-bronquial/4.png"
+        ],
+        "isOnline": false,
+        "githubUrl": "",
+        "liveUrl": ""
     },
     {
         "id": "3",
         "name": "Bargain Project",
         "smartDescription": "Comprehensive management application for sales registration and stock control in physical retail.",
-        "training": false,
+        "fullDescription": "Custom-built Point of Sale (POS) and administration system for Bargain retail. It facilitates the daily recording of transactions, generation of monthly financial reports, and inventory tracking. It includes an admin panel with interactive charts for data-driven decision making.",
+        "thumbnail": "bargain/principal.png",
+        "images": [
+            "bargain/1.png",
+            "bargain/2.png",
+            "bargain/3.png",
+            "bargain/4.png"
+        ],
         "isOnline": true,
         "githubUrl": "https://github.com/tu-usuario/proyecto-bargain",
-        "liveUrl": "https://bargain.com",
-        "images": [
-            "1",
-            "2",
-            "3"
-        ]
+        "liveUrl": "https://bargain.com"
     },
     {
         "id": "4",
-        "name": "Vivofacil Store",
-        "smartDescription": "E-commerce platform developed in PrestaShop with custom modules for local payment and shipping methods.",
-        "training": false,
-        "isOnline": true,
-        "githubUrl": "",
-        "liveUrl": "https://vivofacil.com",
+        "name": "VivoFacil Project",
+        "smartDescription": "Development and modernization of an e-commerce platform in PrestaShop. Includes responsive frontend redesign and creation of custom backend modules for recurring payments (Redsys), dynamic filtering, and geolocated pricing.",
+        "fullDescription": "Full Stack / E-commerce Developer | QA-Bit\nI participated in the development and optimization of the Vivo Fácil store using PrestaShop and PHP. My main contributions include:\n• UI/UX Development: Comprehensive customization of the theme (frontend), ensuring a fluid and responsive design for multiple devices. Creation of a dynamic megamenu to manage links and multimedia.\n• Payment Integration: Development of custom modules for payment gateways (Redsys, Paygol), including the management of subscriptions and recurring charges.\n• Business Logic: Creation of dynamic forms to optimize product search and implementation of a variable pricing system by geolocation.\n• Architecture: Maintenance of legacy code and development of new functionalities under the Symfony framework.",
+        "thumbnail": "vivofacil/principal.png",
         "images": [
-            "1",
-            "2",
-            "3"
-        ]
+            "vivofacil/1.png",
+            "vivofacil/2.png",
+            "vivofacil/3.png",
+            "vivofacil/4.png"
+        ],
+        "isOnline": true,
+        "liveUrl": "vivofacil.com"
     },
     {
         "id": "5",
-        "name": "Raw Materials Web",
-        "smartDescription": "Institutional website and product catalog for a raw materials distribution company.",
-        "training": false,
-        "isOnline": true,
-        "githubUrl": "https://github.com/tu-usuario/web-materias",
-        "liveUrl": "https://materias-primas.com",
+        "name": "Swaltarken Module - PrestaShop",
+        "smartDescription": "Maintenance and development of the Swaltarken module for PrestaShop virtual stores, working in tandem with the Software Ágil team.",
+        "fullDescription": "Freelance Developer | Software Ágil\n\nI collaborated closely with the Software Ágil team in the maintenance and optimization of the Swaltarken module, implemented in various PrestaShop-based virtual stores. My responsibilities included:\n\n• Maintenance and Optimization: Incident resolution, code debugging, and updating module functionalities to ensure compatibility and high performance.\n• Collaborative Work: Integration under agile methodologies with the development team for the continuous improvement of e-commerce platforms.\n• PrestaShop Environment: Ensuring the stability and efficiency of the virtual store ecosystem, working on the native architecture of the CMS.",
+        "thumbnail": "swaltarken/principal.png",
         "images": [
-            "1",
-            "2",
-            "3"
-        ]
-    },
-    {
-        "id": "6",
-        "name": "Radio Recorder",
-        "smartDescription": "Tool that allows users to schedule recordings of online radio broadcasts and store them in the cloud.",
-        "training": true,
-        "isOnline": true,
-        "githubUrl": "https://github.com/tu-usuario/radio-recorder",
-        "liveUrl": "https://radio-recorder.onrender.com",
-        "images": [
-            "1",
-            "2",
-            "3"
-        ]
+            "swaltarken/1.png",
+            "swaltarken/2.png",
+            "swaltarken/3.png",
+            "swaltarken/4.png"
+        ],
+        "isOnline": false,
+        "githubUrl": "",
+        "liveUrl": ""
     }
 ]

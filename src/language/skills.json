@@ -9,43 +9,43 @@
         "id": "2",
         "name": "Python",
         "type": "Language",
-        "overage": 75
+        "overage": 85
     },
     {
         "id": "3",
         "name": "PHP",
         "type": "Language",
-        "overage": 60
+        "overage": 70
     },
     {
         "id": "4",
         "name": "React",
         "type": "Framework",
-        "overage": 47
+        "overage": 78
     },
     {
         "id": "5",
         "name": "React Native",
         "type": "Framework",
-        "overage": 34
+        "overage": 57
     },
     {
         "id": "6",
         "name": "NestJS",
         "type": "Framework",
-        "overage": 50
+        "overage": 90
     },
     {
         "id": "7",
         "name": "Express",
         "type": "Framework",
-        "overage": 87
+        "overage": 95
     },
     {
         "id": "8",
         "name": "Django",
         "type": "Framework",
-        "overage": 68
+        "overage": 88
     },
     {
         "id": "9",
@@ -63,7 +63,7 @@
         "id": "11",
         "name": "WordPress",
         "type": "Framework",
-        "overage": 23
+        "overage": 45
     },
     {
         "id": "12",
@@ -75,7 +75,7 @@
         "id": "13",
         "name": "PostgreSQL",
         "type": "Database",
-        "overage": 90
+        "overage": 95
     },
     {
         "id": "14",
@@ -87,19 +87,19 @@
         "id": "15",
         "name": "Git",
         "type": "Tool",
-        "overage": 40
+        "overage": 90
     },
     {
         "id": "16",
         "name": "Docker",
         "type": "Tool",
-        "overage": 50
+        "overage": 86
     },
     {
         "id": "17",
         "name": "Prompts",
         "type": "Tool",
-        "overage": 50
+        "overage": 88
     },
     {
         "id": "18",

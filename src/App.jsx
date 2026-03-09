@@ -30,7 +30,7 @@ export default function App() {
             main: '#e56e24'
           },
           secondary: {
-            main: '#e52451'
+            main: '#57e524'
           },
           background: {
             default: darkMode ? '#121212' : '#ffffff',
@@ -41,7 +41,7 @@ export default function App() {
           fontFamily: '"Inter", "Helvetica", "Arial", sans-serif',
         },
       }),
-    [darkMode], // Se vuelve a calcular solo cuando darkMode cambia
+    [darkMode],
   );
   return (
     <ThemeProvider theme={theme}>

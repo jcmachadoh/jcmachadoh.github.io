@@ -1,7 +1,7 @@
 import { Container, Typography, Box, Button, ImageListItem, Avatar } from '@mui/material';
 import { useLanguageStore } from '../store/useLanguage';
 import { translations } from '../language/translate';
-import avatar from '../assets/avatar.jpg';
+import avatar from '../assets/avatar.webp';
 const Home = () => {
     const { language } = useLanguageStore();
     const t = translations[language].hero;

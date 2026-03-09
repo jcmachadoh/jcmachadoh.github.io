@@ -1,8 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { keyframes } from '@mui/system';
 
-// Animación más rápida que incluye el movimiento del líquido
-// y asegura que termine con las esquinas derechas curvas (18px)
 const fillAndWave = (width) => keyframes`
   0% { 
     width: 0%; 
@@ -21,7 +19,6 @@ const fillAndWave = (width) => keyframes`
 `;
 
 export const SkillsItems = ({ items, color }) => {
-    // Tomamos el porcentaje; 50% por defecto si no existe
     const fillPercentage = items.overage || 50;
 
     return (
@@ -30,15 +27,14 @@ export const SkillsItems = ({ items, color }) => {
                 position: 'relative',
                 width: 150,
                 height: 36,
-                borderRadius: '18px', // Bordes redondos del contenedor principal
-                bgcolor: 'action.hover', // Color vacío de la barra
+                borderRadius: '18px',
+                bgcolor: 'action.hover',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 boxShadow: 'inset 0 2px 5px rgba(0,0,0,0.1)'
             }}
         >
-            {/* CAPA DE AGUA TRASERA (Más rápida y tenue) */}
             <Box
                 sx={{
                     position: 'absolute',
@@ -46,14 +42,11 @@ export const SkillsItems = ({ items, color }) => {
                     top: 0,
                     height: '100%',
                     bgcolor: color,
-                    opacity: 0.3, // Semitransparente
-                    borderRadius: '18px', // Garantiza curvatura
-                    // Animación de 0.6 segundos
+                    opacity: 0.3,
+                    borderRadius: '18px',
                     animation: `${fillAndWave(fillPercentage + 3)} 0.6s ease-out forwards`,
                 }}
             />
-
-            {/* CAPA DE AGUA FRONTAL (Principal) */}
             <Box
                 sx={{
                     position: 'absolute',
@@ -62,8 +55,7 @@ export const SkillsItems = ({ items, color }) => {
                     height: '100%',
                     bgcolor: color,
                     opacity: 0.85,
-                    borderRadius: '18px', // Garantiza que termine redondeado en la punta derecha
-                    // Animación de 0.8 segundos (un poco más lenta que la trasera para el efecto líquido)
+                    borderRadius: '18px',
                     animation: `${fillAndWave(fillPercentage)} 0.8s ease-out forwards`,
                 }}
             />
@@ -76,7 +68,6 @@ export const SkillsItems = ({ items, color }) => {
                     zIndex: 1, 
                     fontWeight: 'bold', 
                     color: 'text.primary',
-                    textShadow: '0px 0px 4px rgba(255,255,255,0.9)' // Sombra para legibilidad
                 }}
             >
                 {items.name}
