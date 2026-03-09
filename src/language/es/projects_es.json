@@ -83,5 +83,18 @@
         "isOnline": false,
         "githubUrl": "",
         "liveUrl": ""
+    },
+    {
+        "id": "6",
+        "name": "Proyecto desde app en python",
+        "smartDescription": "Este es un proyecto creado desde la gui en python para actualizar las paginas en github",
+        "fullDescription": "some description",
+        "thumbnail": "python/principal.jpg",
+        "images": [
+            "python/1.jpg"
+        ],
+        "isOnline": true,
+        "githubUrl": "",
+        "liveUrl": ""
     }
 ]
