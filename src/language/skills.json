@@ -106,5 +106,11 @@
         "name": "Supabase",
         "type": "Tool",
         "overage": 50
+    },
+    {
+        "id": "19",
+        "name": "Prueba desde python",
+        "type": "Language",
+        "overage": 0
     }
 ]
