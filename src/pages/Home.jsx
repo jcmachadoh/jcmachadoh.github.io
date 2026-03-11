@@ -27,7 +27,7 @@ const Home = () => {
                     variant="outlined"
                     size="large"
                     sx={{ borderRadius: '30px', textTransform: 'none' }}
-                    href='/download/jcmachadoh93.pdf'
+                    href='/download/CV_Jose_Carlos_Machado_Hernandez.pdf'
                     target="_blank"
                     rel="noopener noreferrer"
                 >
