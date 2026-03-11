@@ -39,8 +39,8 @@ export const translations = {
         },
         hero: {
             greeting: 'Hi, I am',
-            role: 'Developer / Your Profession Here',
-            description: 'I transform ideas into elegant and efficient digital solutions.',
+            role: 'Computer Science Engineer / Full Stack Developer',
+            description: 'I transform ideas into elegant and efficient digital solutions. I do it well, because I love what I do.',
             btnProjects: 'View my projects',
             btnCV: 'Download CV (PDF)'
         },
@@ -69,8 +69,8 @@ export const translations = {
         },
         hero: {
             greeting: 'Olá, eu sou',
-            role: 'Desenvolvedor de Software',
-            description: 'Transformo ideias em soluções digitais elegantes e eficientes.',
+            role: 'Engenheiro em Ciências da Computação / Desenvolvedor Full Stack',
+            description: 'Transformo ideias em soluções digitais elegantes e eficientes. Faço bem feito, porque amo o que faço.',
             btnProjects: 'Ver meus projetos',
             btnCV: 'Baixar CV (PDF)'
         },

@@ -4,75 +4,61 @@
         "name": "Clone do Facebook",
         "smartDescription": "Clone do frontend do Facebook desenvolvido com React, TypeScript e Tailwind CSS. Implementa gerenciamento de estado global com Zustand, roteamento dinâmico, modo escuro, internacionalização e design responsivo.",
         "fullDescription": "Desenvolvimento completo do frontend de um clone do Facebook, focado em desempenho, arquitetura limpa e experiência do usuário (UX). Construído com React e TypeScript, usando Vite como bundler e Tailwind CSS para um design Mobile-First fluido, incluindo suporte nativo para Modo Escuro e menus adaptáveis. \n A arquitetura se destaca pelo gerenciamento de estado global com Zustand, notificações e idioma. Foi implementado um sistema de internacionalização (i18n) escalável e estritamente tipado. A navegação utiliza React Router DOM com Lazy Loading para otimizar os tempos de carregamento. \n Tecnicamente, demonstra domínio dos Hooks do React: useMemo para otimizar a filtragem de pesquisas em tempo real e useRef para o manuseio de interfaces complexas. Inclui visualizações dinâmicas conectadas a mocks de dados, simulando um mural de publicações interativo e um sistema de mensagens baseado em parâmetros de URL. \n Por fim, o projeto integra práticas reais de DevOps por meio de um pipeline de Integração e Implantação Contínua (CI/CD) automatizado com GitHub Actions, publicando em produção no GitHub Pages de forma contínua.",
-        "thumbnail": "facebookclone/principal.png",
+        "thumbnail": "facebookclone/principal.webp",
         "images": [
-            "facebookclone/1.png",
-            "facebookclone/2.png",
-            "facebookclone/3.png",
-            "facebookclone/4.png"
+            "facebookclone/1.webp",
+            "facebookclone/2.webp",
+            "facebookclone/3.webp",
+            "facebookclone/4.webp"
         ],
         "isOnline": true,
-        "githubUrl": "https://github.com/tu-usuario/facebook-clone",
-        "liveUrl": "https://tu-facebook-clone.vercel.app"
+        "githubUrl": "https://github.com/jcmachadoh/facebook-clone-react",
+        "liveUrl": "https://jcmachadoh.github.io/facebook-clone-react/"
     },
     {
         "id": "2",
-        "name": "APK Educacional - Asma Brônquica",
-        "smartDescription": "Aplicativo móvel desenvolvido em React Native para o Hospital Pediátrico de Guantánamo, focado na consulta e educação médica sobre asma brônquica.",
-        "fullDescription": "Desenvolvedor Mobile | XETID\n\nLiderei a migração de uma plataforma multimídia educacional para um aplicativo móvel (APK) focado na asma brônquica, projetado especificamente para o Hospital Pediátrico de Ensino de Guantánamo. Minhas principais contribuições foram:\n\n• Desenvolvimento Mobile: Criação do aplicativo do zero usando React Native, garantindo desempenho fluido e uma experiência de usuário moderna.\n• Digitalização na Saúde: Transformação e adaptação de materiais multimídia tradicionais em uma ferramenta interativa de bolso.\n• Impacto Educacional: Entrega de uma solução tecnológica estável, adotada ativamente por estudantes de medicina e especialistas para consulta rápida e formação acadêmica.",
-        "thumbnail": "asma-bronquial/principal.png",
-        "images": [
-            "asma-bronquial/1.png",
-            "asma-bronquial/2.png",
-            "asma-bronquial/3.png",
-            "asma-bronquial/4.png"
-        ],
-        "isOnline": false,
-        "githubUrl": "",
-        "liveUrl": ""
-    },
-    {
-        "id": "3",
         "name": "Projeto Bargain",
         "smartDescription": "Aplicativo de gestão integral para o registro de vendas e controle de estoque no comércio físico.",
         "fullDescription": "Sistema de Ponto de Venda (PDV) e administração criado sob medida para o comércio Bargain. Facilita o registro diário de transações, a geração de relatórios financeiros mensais e o rastreamento de inventário. Inclui um painel de administrador com gráficos interativos para tomada de decisão baseada em dados.",
-        "thumbnail": "bargain/principal.png",
+        "thumbnail": "bargain/principal.webp",
         "images": [
-            "bargain/1.png",
-            "bargain/2.png",
-            "bargain/3.png",
-            "bargain/4.png"
+            "bargain/1.webp",
+            "bargain/2.webp",
+            "bargain/3.webp",
+            "bargain/4.webp",
+            "bargain/5.webp",
+            "bargain/6.webp",
+            "bargain/7.webp",
+            "bargain/8.webp",
+            "bargain/9.webp",
+            "bargain/10.webp"
         ],
-        "isOnline": true,
-        "githubUrl": "https://github.com/tu-usuario/proyecto-bargain",
-        "liveUrl": "https://bargain.com"
+        "isOnline": true
     },
     {
-        "id": "4",
+        "id": "3",
         "name": "Projeto VivoFacil",
         "smartDescription": "Desenvolvimento e modernização de plataforma e-commerce em PrestaShop. Inclui redesenho responsivo do frontend e criação de módulos backend sob medida para pagamentos recorrentes (Redsys), filtragem dinâmica e preços geolocalizados.",
         "fullDescription": "Desenvolvedor Full Stack / E-commerce | QA-Bit\nParticipei do desenvolvimento e otimização da loja Vivo Fácil utilizando PrestaShop e PHP. Minhas principais contribuições incluem:\n• Desenvolvimento UI/UX: Personalização integral do tema (frontend), garantindo um design fluido e responsivo para múltiplos dispositivos. Criação de megamenu dinâmico para gerenciar links e multimídia.\n• Integração de Pagamentos: Desenvolvimento de módulos sob medida para gateways de pagamento (Redsys, Paygol), incluindo o gerenciamento de assinaturas e cobranças recorrentes.\n• Lógica de Negócios: Criação de formulários dinâmicos para otimizar a busca de produtos e implementação de um sistema de preços variáveis por geolocalização.\n• Arquitetura: Manutenção de código legado e desenvolvimento de novas funcionalidades sob o framework Symfony.",
-        "thumbnail": "vivofacil/principal.png",
+        "thumbnail": "vivofacil/principal.webp",
         "images": [
-            "vivofacil/1.png",
-            "vivofacil/2.png",
-            "vivofacil/3.png",
-            "vivofacil/4.png"
+            "vivofacil/1.webp",
+            "vivofacil/2.webp",
+            "vivofacil/3.webp",
+            "vivofacil/4.webp"
         ],
         "isOnline": true,
-        "liveUrl": "vivofacil.com"
+        "liveUrl": "https://vivofacil.com/es/"
     },
     {
-        "id": "5",
+        "id": "4",
         "name": "Módulo Swaltarken - PrestaShop",
         "smartDescription": "Manutenção e desenvolvimento do módulo Swaltarken para lojas virtuais em PrestaShop, trabalhando em conjunto com a equipe de Software Ágil.",
         "fullDescription": "Desenvolvedor Freelancer | Software Ágil\n\nColaborei de perto com a equipe de Software Ágil na manutenção e otimização do módulo Swaltarken, implementado em diversas lojas virtuais baseadas em PrestaShop. Minhas responsabilidades incluíram:\n\n• Manutenção e Otimização: Resolução de incidentes, depuração de código e atualização de funcionalidades do módulo para garantir sua compatibilidade e alto desempenho.\n• Trabalho Colaborativo: Integração sob metodologias ágeis com a equipe de desenvolvimento para a melhoria contínua das plataformas de e-commerce.\n• Ambiente PrestaShop: Garantia da estabilidade e eficiência do ecossistema das lojas virtuais, trabalhando na arquitetura nativa do CMS.",
-        "thumbnail": "swaltarken/principal.png",
+        "thumbnail": "swaltarken/principal.webp",
         "images": [
-            "swaltarken/1.png",
-            "swaltarken/2.png",
-            "swaltarken/3.png",
-            "swaltarken/4.png"
+            "swaltarken/1.webp",
+            "swaltarken/2.webp"
         ],
         "isOnline": false,
         "githubUrl": "",

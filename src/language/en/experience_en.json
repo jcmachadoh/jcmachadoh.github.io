@@ -1,59 +1,59 @@
 [
-    {
-        "id": "5",
-        "center": "Freelance",
-        "cargo": "Software Developer",
-        "dateStart": "September 2025",
-        "dateEnd": "Present",
-        "works": [
-            "Implemented a management application for sales registration at Bargain commerce.",
-            "Bug fixing and feature enhancements for the PrestaShop Swaltarken module.",
-            "Development of a trading tool for virtual stores."
-        ]
-    },
-    {
-        "id": "4",
-        "center": "Qa-Bit",
-        "cargo": "Software Developer",
-        "dateStart": "March 2025",
-        "dateEnd": "Present",
-        "works": [
-            "Development of PrestaShop modules for the Vivofacil virtual store."
-        ]
-    },
-    {
-        "id": "3",
-        "center": "Xetid",
-        "cargo": "Mid-level Implementer",
-        "dateStart": "September 2023",
-        "dateEnd": "August 2025",
-        "works": [
-            "Deployment of various IT systems.",
-            "Web development for the ENZONA payment gateway.",
-            "Development of an informative APK for the Guantánamo Pediatric Hospital."
-        ]
-    },
-    {
-        "id": "2",
-        "center": "Company / Institution",
-        "cargo": "Network and IT Security Administrator",
-        "dateStart": "September 2016",
-        "dateEnd": "August 2023",
-        "works": [
-            "Setup and administration of computer networks.",
-            "Development of IT security plans, audits, and controls.",
-            "Development of management applications and institutional websites."
-        ]
-    },
-    {
-        "id": "1",
-        "center": "University of Information Sciences (UCI)",
-        "cargo": "Intern (DevOps)",
-        "dateStart": "2015",
-        "dateEnd": "2015",
-        "works": [
-            "Deployment of Cuban court systems.",
-            "Linux server administration taking on a DevOps role."
-        ]
-    }
+  {
+    "id": "5",
+    "center": "Freelance",
+    "cargo": "Software Developer",
+    "dateStart": "September 2025",
+    "dateEnd": "Present",
+    "works": [
+      "Implementation of the management application for sales registration at the Bargain retail store.",
+      "Bug fixing and development of improvements for the PrestaShop Swaltarken module.",
+      "Development of a trading tool for virtual stores."
+    ]
+  },
+  {
+    "id": "4",
+    "center": "Qa-Bit",
+    "cargo": "Software Developer",
+    "dateStart": "March 2025",
+    "dateEnd": "Present",
+    "works": [
+      "Development of PrestaShop modules for the Vivofacil virtual store."
+    ]
+  },
+  {
+    "id": "3",
+    "center": "Xetid",
+    "cargo": "Mid-level Deployment Specialist",
+    "dateStart": "September 2022",
+    "dateEnd": "August 2025",
+    "works": [
+      "Deployment of various IT systems.",
+      "Web development for the ENZONA payment gateway.",
+      "Development of an informative APK for the Guantánamo Pediatric Hospital."
+    ]
+  },
+  {
+    "id": "2",
+    "center": "Company / Institution",
+    "cargo": "Network and IT Security Administrator",
+    "dateStart": "September 2016",
+    "dateEnd": "August 2022",
+    "works": [
+      "Assembly and administration of computer networks.",
+      "Development of IT security plans, audits, and controls.",
+      "Development of management applications and institutional websites."
+    ]
+  },
+  {
+    "id": "1",
+    "center": "University of Information Sciences (UCI)",
+    "cargo": "Intern Student (DevOps)",
+    "dateStart": "2015",
+    "dateEnd": "2015",
+    "works": [
+      "Deployment of Cuban court systems.",
+      "Linux server administration using a DevOps role."
+    ]
+  }
 ]

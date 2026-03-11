@@ -6,6 +6,12 @@
         "overage": 100
     },
     {
+        "id": "1",
+        "name": "TypeScript",
+        "type": "Language",
+        "overage": 100
+    },
+    {
         "id": "2",
         "name": "Python",
         "type": "Language",

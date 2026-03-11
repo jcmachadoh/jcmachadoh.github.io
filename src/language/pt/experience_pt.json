@@ -1,59 +1,59 @@
 [
-    {
-        "id": "5",
-        "center": "Freelancer",
-        "cargo": "Desenvolvedor de Software",
-        "dateStart": "Setembro 2025",
-        "dateEnd": "Presente",
-        "works": [
-            "Implementação do aplicativo de gestão para o registro de vendas no comércio Bargain.",
-            "Correção de bugs e desenvolvimento de melhorias para o módulo PrestaShop Swaltarken.",
-            "Desenvolvimento de ferramenta de trading para lojas virtuais."
-        ]
-    },
-    {
-        "id": "4",
-        "center": "Qa-Bit",
-        "cargo": "Desenvolvedor de Software",
-        "dateStart": "Março 2025",
-        "dateEnd": "Presente",
-        "works": [
-            "Desenvolvimento de módulos PrestaShop para a loja virtual Vivofacil."
-        ]
-    },
-    {
-        "id": "3",
-        "center": "Xetid",
-        "cargo": "Implementador Pleno",
-        "dateStart": "Setembro 2023",
-        "dateEnd": "Agosto 2025",
-        "works": [
-            "Implantação de diversos sistemas de TI.",
-            "Desenvolvimento web para o gateway de pagamento ENZONA.",
-            "Desenvolvimento de APK informativo para o Hospital Pediátrico de Guantánamo."
-        ]
-    },
-    {
-        "id": "2",
-        "center": "Empresa / Instituição",
-        "cargo": "Administrador de Redes e Segurança da Informação",
-        "dateStart": "Setembro 2016",
-        "dateEnd": "Agosto 2023",
-        "works": [
-            "Montagem e administração de redes de computadores.",
-            "Elaboração de planos, auditorias e controles de segurança da informação.",
-            "Desenvolvimento de aplicativos de gestão e sites institucionais."
-        ]
-    },
-    {
-        "id": "1",
-        "center": "Universidade de Ciências da Computação (UCI)",
-        "cargo": "Estagiário (DevOps)",
-        "dateStart": "2015",
-        "dateEnd": "2015",
-        "works": [
-            "Implantação de sistemas de tribunais cubanos.",
-            "Administração de servidores Linux atuando como DevOps."
-        ]
-    }
+  {
+    "id": "5",
+    "center": "Freelance",
+    "cargo": "Desenvolvedor de Software",
+    "dateStart": "Setembro de 2025",
+    "dateEnd": "O momento",
+    "works": [
+      "Implementação do aplicativo de gestão para o registro de vendas no comércio Bargain.",
+      "Correção de bugs e desenvolvimento de melhorias para o módulo PrestaShop Swaltarken.",
+      "Desenvolvimento de ferramenta de trading para lojas virtuais."
+    ]
+  },
+  {
+    "id": "4",
+    "center": "Qa-Bit",
+    "cargo": "Desenvolvedor de Software",
+    "dateStart": "Março de 2025",
+    "dateEnd": "O momento",
+    "works": [
+      "Desenvolvimento de módulos PrestaShop para a loja virtual Vivofacil."
+    ]
+  },
+  {
+    "id": "3",
+    "center": "Xetid",
+    "cargo": "Implantador Pleno",
+    "dateStart": "Setembro de 2022",
+    "dateEnd": "Agosto de 2025",
+    "works": [
+      "Implantação de diversos sistemas de TI.",
+      "Desenvolvimento web para o gateway de pagamento ENZONA.",
+      "Desenvolvimento de APK informativo para o Hospital Pediátrico de Guantánamo."
+    ]
+  },
+  {
+    "id": "2",
+    "center": "Empresa / Instituição",
+    "cargo": "Administrador de Redes e Segurança da Informação",
+    "dateStart": "Setembro de 2016",
+    "dateEnd": "Agosto de 2022",
+    "works": [
+      "Montagem e administração de redes de computadores.",
+      "Elaboração de planos, auditorias e controles de segurança da informação.",
+      "Desenvolvimento de aplicativos de gestão e sites institucionais."
+    ]
+  },
+  {
+    "id": "1",
+    "center": "Universidade de Ciências da Informação (UCI)",
+    "cargo": "Estagiário (DevOps)",
+    "dateStart": "2015",
+    "dateEnd": "2015",
+    "works": [
+      "Implantação de sistemas de tribunais cubanos.",
+      "Administração de servidores Linux através de função DevOps."
+    ]
+  }
 ]
