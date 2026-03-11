@@ -13,7 +13,7 @@ export default function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   // 1. Estado para el modo oscuro (por defecto falso/claro)
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   // 2. Función para alternar el tema
   const toggleTheme = () => {
@@ -53,7 +53,7 @@ export default function App() {
       <Experience />
       <Projects />
       <Box sx={{ bgcolor: '#333333', color: 'white', py: 4, textAlign: 'center' }}>
-        <Typography variant="body2">&copy; 2024 Tu Nombre. Construido con React y Material UI.</Typography>
+        <Typography variant="body2">&copy; {new Date().getFullYear()} José Carlos Machado Hernández. Construido con React y Material UI.</Typography>
       </Box>
 
     </ThemeProvider>

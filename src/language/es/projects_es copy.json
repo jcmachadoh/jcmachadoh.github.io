@@ -12,8 +12,24 @@
             "facebookclone/4.webp"
         ],
         "isOnline": true,
-        "githubUrl": "https://github.com/jcmachadoh/facebook-clone-react",
-        "liveUrl": "https://jcmachadoh.github.io/facebook-clone-react/"
+        "githubUrl": "https://github.com/tu-usuario/facebook-clone",
+        "liveUrl": "https://tu-facebook-clone.vercel.app"
+    },
+    {
+        "id": "2",
+        "name": "APK Educativa - Asma Bronquial",
+        "smartDescription": "Aplicación móvil desarrollada en React Native para el Hospital Pediátrico de Guantánamo, enfocada en la consulta y educación médica sobre el asma bronquial.",
+        "fullDescription": "Desarrollador Móvil | XETID\n\nLideré la migración de una plataforma multimedia educativa a una aplicación móvil (APK) enfocada en el asma bronquial, diseñada específicamente para el Hospital Pediátrico Docente de Guantánamo. Mis aportes principales fueron:\n\n• Desarrollo Móvil: Creación de la aplicación desde cero utilizando React Native, garantizando un rendimiento fluido y una experiencia de usuario moderna.\n• Digitalización en Salud: Transformación y adaptación de materiales multimedia tradicionales en una herramienta interactiva de bolsillo.\n• Impacto Educativo: Entrega de una solución tecnológica estable, adoptada activamente por estudiantes de medicina y especialistas para consulta rápida y formación académica.",
+        "thumbnail": "asma-bronquial/principal.webp",
+        "images": [
+            "asma-bronquial/1.webp",
+            "asma-bronquial/2.webp",
+            "asma-bronquial/3.webp",
+            "asma-bronquial/4.webp"
+        ],
+        "isOnline": false,
+        "githubUrl": "",
+        "liveUrl": ""
     },
     {
         "id": "3",
@@ -33,7 +49,9 @@
             "bargain/9.webp",
             "bargain/10.webp"
         ],
-        "isOnline": true
+        "isOnline": true,
+        "githubUrl": "https://github.com/tu-usuario/proyecto-bargain",
+        "liveUrl": "https://bargain.com"
     },
     {
         "id": "3",
@@ -48,7 +66,7 @@
             "vivofacil/4.webp"
         ],
         "isOnline": true,
-        "liveUrl": "https://vivofacil.com/es/"
+        "liveUrl": "vivofacil.com"
     },
     {
         "id": "5",
@@ -58,9 +76,24 @@
         "thumbnail": "swaltarken/principal.webp",
         "images": [
             "swaltarken/1.webp",
-            "swaltarken/2.webp"
+            "swaltarken/2.webp",
+            "swaltarken/3.webp",
+            "swaltarken/4.webp"
         ],
         "isOnline": false,
+        "githubUrl": "",
+        "liveUrl": ""
+    },
+    {
+        "id": "6",
+        "name": "Proyecto desde app en python",
+        "smartDescription": "Este es un proyecto creado desde la gui en python para actualizar las paginas en github",
+        "fullDescription": "some description",
+        "thumbnail": "python/principal.jpg",
+        "images": [
+            "python/1.jpg"
+        ],
+        "isOnline": true,
         "githubUrl": "",
         "liveUrl": ""
     }

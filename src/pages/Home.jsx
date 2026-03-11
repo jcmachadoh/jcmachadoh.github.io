@@ -23,7 +23,14 @@ const Home = () => {
                 <Button variant="contained" size="large" sx={{ borderRadius: '30px', textTransform: 'none' }} href="#proyectos">
                     {t.btnProjects}
                 </Button>
-                <Button variant="outlined" size="large" sx={{ borderRadius: '30px', textTransform: 'none' }} href='/download/jcmachadoh93.pdf'>
+                <Button
+                    variant="outlined"
+                    size="large"
+                    sx={{ borderRadius: '30px', textTransform: 'none' }}
+                    href='/download/jcmachadoh93.pdf'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     {t.btnCV}
                 </Button>
             </Box>
