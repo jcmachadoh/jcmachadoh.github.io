@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { keyframes } from '@mui/system';
+import { keyframes } from '@mui/material/styles';
 
 const fillAndWave = (width) => keyframes`
   0% { 
