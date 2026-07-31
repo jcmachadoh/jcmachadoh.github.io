@@ -6,8 +6,8 @@
 
 export const projects = [
     {
-        "id": 1,
-        "thumbnail": "facebookclone/principal.webp",
+        "id": "1",
+        "thumbnail": "facebookclone/1.webp",
         "images": [
             "facebookclone/1.webp",
             "facebookclone/2.webp",
@@ -34,8 +34,8 @@ export const projects = [
         }
     },
     {
-        "id": 2,
-        "thumbnail": "bargain/principal.webp",
+        "id": "2",
+        "thumbnail": "bargain/1.webp",
         "images": [
             "bargain/1.webp",
             "bargain/2.webp",
@@ -68,8 +68,8 @@ export const projects = [
         }
     },
     {
-        "id": 3,
-        "thumbnail": "vivofacil/principal.webp",
+        "id": "3",
+        "thumbnail": "vivofacil/1.webp",
         "images": [
             "vivofacil/1.webp",
             "vivofacil/2.webp",
@@ -96,8 +96,8 @@ export const projects = [
         }
     },
     {
-        "id": 4,
-        "thumbnail": "swaltarken/principal.webp",
+        "id": "4",
+        "thumbnail": "swaltarken/1.webp",
         "images": [
             "swaltarken/1.webp",
             "swaltarken/2.webp"
@@ -119,6 +119,43 @@ export const projects = [
             "name": "Módulo Swaltarken - PrestaShop",
             "smartDescription": "Manutenção e desenvolvimento do módulo Swaltarken para lojas virtuais em PrestaShop, trabalhando em conjunto com a equipe de Software Ágil.",
             "fullDescription": "Desenvolvedor Freelancer | Software Ágil\n\nColaborei de perto com a equipe de Software Ágil na manutenção e otimização do módulo Swaltarken, implementado em diversas lojas virtuais baseadas em PrestaShop. Minhas responsabilidades incluíram:\n\n• Manutenção e Otimização: Resolução de incidentes, depuração de código e atualização de funcionalidades do módulo para garantir sua compatibilidade e alto desempenho.\n• Trabalho Colaborativo: Integração sob metodologias ágeis com a equipe de desenvolvimento para a melhoria contínua das plataformas de e-commerce.\n• Ambiente PrestaShop: Garantia da estabilidade e eficiência do ecossistema das lojas virtuais, trabalhando na arquitetura nativa do CMS."
+        }
+    },
+    {
+        "id": "bloqueollamadas",
+        "thumbnail": "bloqueollamadas/screenshot-20260714-100856-ms9ec3lx.png",
+        "images": [
+            "bloqueollamadas/screenshot-20260714-100456-ms9ebpjq.png",
+            "bloqueollamadas/screenshot-20260714-100531-ms9ebs8b.png",
+            "bloqueollamadas/screenshot-20260714-100545-ms9ebtql.png",
+            "bloqueollamadas/screenshot-20260714-100644-ms9ebvrk.png",
+            "bloqueollamadas/screenshot-20260714-100648-ms9ebxpx.png",
+            "bloqueollamadas/screenshot-20260714-100717-ms9ebziw.png",
+            "bloqueollamadas/screenshot-20260714-100845-ms9ec215.png",
+            "bloqueollamadas/screenshot-20260714-100856-ms9ec3lx.png",
+            "bloqueollamadas/screenshot-20260714-102229-ms9ec57o.png",
+            "bloqueollamadas/screenshot-20260731-162033-ms9ec6xe.png",
+            "bloqueollamadas/screenshot-20260731-162053-ms9ec8to.png",
+            "bloqueollamadas/screenshot-20260731-162105-ms9ecabk.png",
+            "bloqueollamadas/screenshot-20260731-162202-ms9ecc55.png"
+        ],
+        "isOnline": false,
+        "githubUrl": "",
+        "liveUrl": "",
+        "es": {
+            "name": "Bloqueo de llamadas",
+            "smartDescription": "Desarrollé una aplicación móvil nativa para Android en Kotlin orientada a la gestión avanzada y filtrado de llamadas mediante reglas dinámicas. La solución permite la creación y edición de listas blancas y negras basadas en contactos y números específicos, parametrizables por horarios y líneas móviles (Multi-SIM). Cuenta con un sistema de notificaciones en tiempo real para llamadas bloqueadas, registro de historial, soporte multiidioma (Español/Inglés) y una interfaz de usuario altamente personalizable con temas dinámicos de color y soporte nativo para Modo Claro/Oscuro.",
+            "fullDescription": "Desarrollador Android Principal | Proyecto Personal\n\nDiseño y Arquitectura: Creación de una aplicación nativa para el ecosistema Android utilizando Kotlin, implementando buenas prácticas de arquitectura (como MVVM) y componentes modernos de Android Jetpack para garantizar modularidad y rendimiento.\n\nMotor de Reglas y Filtrado: Implementación de lógica avanzada para la gestión dinámica de listas de acceso (listas blancas y listas negras). El sistema intercepta y procesa llamadas entrantes basándose en criterios específicos: números manuales, contactos de la agenda telefónica, franjas horarias estrictas y discriminación por línea móvil activa (soporte Multi-SIM).\n\nExperiencia de Usuario (UX/UI): Diseño e implementación de una interfaz intuitiva y moderna que soporta de forma nativa la alternancia entre Modo Claro y Oscuro, además de incluir un selector de temas con paletas de colores dinámicas y personalizables para el usuario.\n\nNotificaciones e Historial: Integración de un servicio en segundo plano para el envío de notificaciones locales inmediatas ante llamadas bloqueadas y desarrollo de una vista de historial detallada para auditoría de llamadas interceptadas.\n\nInternacionalización: Arquitectura de software preparada para el mercado global mediante soporte nativo multiidioma (Español / Inglés)."
+        },
+        "en": {
+            "name": "Bloqueo de llamadas",
+            "smartDescription": "Developed a native Android application in Kotlin for advanced call management and filtering. The app enables users to build and modify dynamic blacklists and whitelists for specific numbers and contacts, restricted by custom schedules and mobile lines (Multi-SIM support). Key features include real-time push notifications for blocked calls, an access history log, full localization (English/Spanish), and a polished UI supporting custom color themes alongside native Light/Dark modes.",
+            "fullDescription": "Lead Android Developer | Personal Project\n\nArchitecture & Design: Engineered a native Android application using Kotlin, leveraging modern clean architecture principles (MVVM) and Android Jetpack components to ensure code maintainability and scalability.\n\nFiltering & Rule Engine: Developed advanced logic for dynamic access list control (whitelisting/blacklisting). The system intercepts incoming calls based on granular user constraints, including contact books, custom-defined schedules, and specific mobile network lines (Multi-SIM handling).\n\nUI/UX Customization: Designed a fluid user experience featuring native Light and Dark mode compatibility, complemented by a dynamic theme-switching palette that allows users to customize the visual accent of the app.\n\nNotifications & Logs: Integrated background event processing to deliver immediate local notifications whenever a call is blocked, alongside a dedicated history view tracking all intercepted communication.\n\nLocalization: Built the app with a global-ready approach, implementing complete multi-language support (English / Spanish) out of the box."
+        },
+        "pt": {
+            "name": "Bloqueo de llamadas",
+            "smartDescription": "Desenvolvi um aplicativo móvel nativo para Android em Kotlin voltado para o gerenciamento avançado e filtragem de chamadas por meio de regras dinâmicas. A solução permite a criação e edição de listas brancas e negras baseadas em contatos e números específicos, parametrizáveis por horários e linhas móveis (suporte a Multi-SIM). Conta com um sistema de notificações em tempo real para chamadas bloqueadas, registro de histórico, suporte multi-idioma (Espanhol/Inglês) e uma interface de usuário altamente personalizável com temas dinâmicos de cores e suporte nativo para Modo Claro/Escuro.",
+            "fullDescription": "Desenvolvedor Android Principal | Projeto Pessoal\n\nArquitetura e Design: Criação de um aplicativo nativo para o ecossistema Android utilizando Kotlin, implementando boas práticas de arquitetura (como MVVM) e componentes modernos do Android Jetpack para garantir modularidade e desempenho.\n\nMotor de Regras e Filtragem: Implementação de lógica avançada para a gestão dinâmica de listas de acesso (listas brancas e listas negras). O sistema intercepta e processa chamadas recebidas baseando-se em critérios específicos: números manuais, contatos da agenda telefônica, faixas horárias estritas e discriminação por linha móvel ativa (suporte Multi-SIM).\n\nExperiência do Usuário (UX/UI): Design e implementação de uma interface intuitiva e moderna com suporte nativo para a alternância entre Modo Claro e Escuro, além de incluir um seletor de temas com paletas de cores dinâmicas e personalizáveis pelo usuário.\n\nNotificações e Histórico: Integração de um serviço em segundo plano para o envio de notificações locais imediatas quando uma chamada é bloqueada, além do desenvolvimento de uma visualização de histórico detalhada para auditoria de chamadas interceptadas.\n\nInternacionalização: Arquitetura de software preparada para o mercado global através do suporte nativo multi-idioma (Espanhol / Inglês)."
         }
     }
 ];
