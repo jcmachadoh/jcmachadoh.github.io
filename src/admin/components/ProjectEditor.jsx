@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import {
     Box, Button, Typography, TextField, Switch, FormControlLabel, Tab, Tabs,
-    IconButton, Chip, Grid, Divider, Paper
+    IconButton, Chip, Grid, Divider, Paper, CircularProgress
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SaveIcon from '@mui/icons-material/Save';
@@ -11,7 +11,8 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import DeleteIcon from '@mui/icons-material/Delete';
 import StarIcon from '@mui/icons-material/Star';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
-import { slugify, sanitizeFileName } from '../utils';
+import { slugify } from '../utils';
+import { normalizeImage } from '../normalizeImage';
 
 const LANGS = [
     { code: 'es', label: 'Español' },
@@ -29,6 +30,7 @@ export const ProjectEditor = ({ draft, onSave, onCancel }) => {
         pt: draft.pt || EMPTY_LANG,
     }));
     const [lang, setLang] = useState('es');
+    const [normalizing, setNormalizing] = useState(false);
     const fileInputRef = useRef(null);
 
     const updateGeneral = (field, value) => {
@@ -42,25 +44,34 @@ export const ProjectEditor = ({ draft, onSave, onCancel }) => {
         }));
     };
 
-    const handleFiles = (files) => {
-        Array.from(files || []).forEach((file) => {
-            const reader = new FileReader();
-            reader.onload = () => {
+    const handleFiles = async (files) => {
+        const selected = Array.from(files || []);
+        if (selected.length === 0) return;
+        setNormalizing(true);
+        try {
+            const normalized = [];
+            for (const file of selected) {
+                try {
+                    const { name, dataUrl } = await normalizeImage(file);
+                    normalized.push({
+                        key: `img-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+                        kind: 'new',
+                        name,
+                        dataUrl,
+                    });
+                } catch {
+                    /* ignorar archivo no procesable */
+                }
+            }
+            if (normalized.length > 0) {
                 setLocalDraft((prev) => ({
                     ...prev,
-                    images: [
-                        ...prev.images,
-                        {
-                            key: `img-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
-                            kind: 'new',
-                            name: sanitizeFileName(file.name),
-                            dataUrl: reader.result,
-                        },
-                    ],
+                    images: [...prev.images, ...normalized],
                 }));
-            };
-            reader.readAsDataURL(file);
-        });
+            }
+        } finally {
+            setNormalizing(false);
+        }
     };
 
     const removeImage = (index) => {
@@ -225,11 +236,12 @@ export const ProjectEditor = ({ draft, onSave, onCancel }) => {
                     </Typography>
                     <Button
                         variant="contained"
-                        startIcon={<AddPhotoAlternateIcon />}
+                        startIcon={normalizing ? <CircularProgress size={18} color="inherit" /> : <AddPhotoAlternateIcon />}
                         onClick={() => fileInputRef.current?.click()}
+                        disabled={normalizing}
                         sx={{ textTransform: 'none' }}
                     >
-                        Subir imágenes
+                        {normalizing ? 'Normalizando...' : 'Subir imágenes'}
                     </Button>
                     <input
                         ref={fileInputRef}
@@ -244,6 +256,9 @@ export const ProjectEditor = ({ draft, onSave, onCancel }) => {
                     />
                 </Box>
 
+                <Typography variant="body2" color="text.secondary" gutterBottom>
+                    Las imágenes nuevas se normalizan automáticamente a 1280x720 (16:9) y se convierten a WebP antes de subirlas.
+                </Typography>
                 <Typography variant="body2" color="text.secondary" gutterBottom>
                     Haz clic en la estrella para elegir la imagen de portada de la tarjeta.
                 </Typography>
@@ -285,6 +300,15 @@ export const ProjectEditor = ({ draft, onSave, onCancel }) => {
                                             size="small"
                                             color="primary"
                                             sx={{ position: 'absolute', top: 6, left: 6, fontWeight: 'bold' }}
+                                        />
+                                    )}
+                                    {image.kind === 'new' && (
+                                        <Chip
+                                            label="1280x720"
+                                            size="small"
+                                            color="success"
+                                            variant="outlined"
+                                            sx={{ position: 'absolute', top: 6, right: 6, fontWeight: 'bold', bgcolor: 'background.default' }}
                                         />
                                     )}
                                     <Box sx={{ display: 'flex', justifyContent: 'center', gap: 0.5, mt: 0.5 }}>
