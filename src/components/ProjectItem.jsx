@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
 
 const baseImg = '/projects/';
 
@@ -9,6 +9,7 @@ export const ProjectItem = ({ project, handleOpenModal }) => {
             display: 'flex',
             flexDirection: 'column',
             borderRadius: 3,
+            overflow: 'hidden',
             boxShadow: 3,
             transition: 'transform 0.3s, box-shadow 0.3s',
             '&:hover': {
@@ -16,13 +17,17 @@ export const ProjectItem = ({ project, handleOpenModal }) => {
                 boxShadow: 6
             }
         }}>
-            <CardMedia
-                component="img"
-                height="220"
-                image={baseImg + project.thumbnail}
-                alt={`Portada de ${project.name}`}
-                sx={{ objectFit: 'cover' }}
-            />
+            <Box sx={{ overflow: 'hidden' }}>
+                <CardMedia
+                    component="img"
+                    height="220"
+                    image={baseImg + project.thumbnail}
+                    alt={`Portada de ${project.name}`}
+                    sx={{ objectFit: 'cover', transition: 'transform 0.4s ease' }}
+                    onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.06)' }}
+                    onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)' }}
+                />
+            </Box>
 
             <CardContent sx={{ flexGrow: 1 }}>
                 <Typography variant="h5" fontWeight="bold" gutterBottom color="primary.main">

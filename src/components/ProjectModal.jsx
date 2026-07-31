@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
     Dialog, DialogTitle, DialogContent, DialogActions,
     Typography, Button, IconButton, Box, Chip
@@ -6,17 +6,32 @@ import {
 import CloseIcon from '@mui/icons-material/Close';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-const baseImg = '/projects/'
+const baseImg = '/projects/';
 
 export const ProjectModal = ({ project, open, handleClose }) => {
-    // Estado para saber qué imagen del array estamos mostrando en grande
     const [activeImage, setActiveImage] = useState(0);
 
-    // Si no hay proyecto seleccionado, no renderizamos nada
+    const images = project?.images || [];
+
+    const goTo = useCallback((direction) => {
+        setActiveImage((current) => (current + direction + images.length) % images.length);
+    }, [images.length]);
+
+    useEffect(() => {
+        if (!open) return;
+        const onKeyDown = (event) => {
+            if (event.key === 'ArrowLeft') goTo(-1);
+            if (event.key === 'ArrowRight') goTo(1);
+        };
+        window.addEventListener('keydown', onKeyDown);
+        return () => window.removeEventListener('keydown', onKeyDown);
+    }, [open, goTo]);
+
     if (!project) return null;
 
-    // Al cerrar, reseteamos la imagen a la primera
     const onClose = () => {
         setActiveImage(0);
         handleClose();
@@ -46,23 +61,76 @@ export const ProjectModal = ({ project, open, handleClose }) => {
                 </Typography>
 
                 {/* Galería / Carrusel Visual */}
-                {project.images && project.images.length > 0 && (
+                {images.length > 0 && (
                     <Box sx={{ mt: 3 }}>
-                        {/* Imagen Principal */}
-                        <Box
-                            component="img"
-                            src={baseImg + project.images[activeImage]}
-                            alt={`Vista de ${project.name}`}
-                            sx={{ width: '100%', height: 'auto', maxHeight: '400px', objectFit: 'cover', borderRadius: 2, mb: 2, boxShadow: 3 }}
-                        />
+                        {/* Imagen Principal con navegación */}
+                        <Box sx={{ position: 'relative', mb: 2 }}>
+                            <Box
+                                component="img"
+                                src={baseImg + images[activeImage]}
+                                alt={`Vista de ${project.name}`}
+                                sx={{ width: '100%', height: 'auto', maxHeight: '400px', objectFit: 'cover', borderRadius: 2, boxShadow: 3, display: 'block' }}
+                            />
+
+                            {images.length > 1 && (
+                                <>
+                                    <IconButton
+                                        onClick={() => goTo(-1)}
+                                        aria-label="Imagen anterior"
+                                        sx={{
+                                            position: 'absolute',
+                                            left: 8,
+                                            top: '50%',
+                                            transform: 'translateY(-50%)',
+                                            bgcolor: 'rgba(0,0,0,0.45)',
+                                            color: 'white',
+                                            '&:hover': { bgcolor: 'rgba(0,0,0,0.65)' }
+                                        }}
+                                    >
+                                        <ChevronLeftIcon />
+                                    </IconButton>
+                                    <IconButton
+                                        onClick={() => goTo(1)}
+                                        aria-label="Imagen siguiente"
+                                        sx={{
+                                            position: 'absolute',
+                                            right: 8,
+                                            top: '50%',
+                                            transform: 'translateY(-50%)',
+                                            bgcolor: 'rgba(0,0,0,0.45)',
+                                            color: 'white',
+                                            '&:hover': { bgcolor: 'rgba(0,0,0,0.65)' }
+                                        }}
+                                    >
+                                        <ChevronRightIcon />
+                                    </IconButton>
+                                    <Typography
+                                        variant="caption"
+                                        sx={{
+                                            position: 'absolute',
+                                            bottom: 8,
+                                            right: 12,
+                                            bgcolor: 'rgba(0,0,0,0.55)',
+                                            color: 'white',
+                                            px: 1,
+                                            py: 0.25,
+                                            borderRadius: 1
+                                        }}
+                                    >
+                                        {activeImage + 1} / {images.length}
+                                    </Typography>
+                                </>
+                            )}
+                        </Box>
 
                         {/* Miniaturas (Thumbnails) para seleccionar */}
                         <Box sx={{ display: 'flex', gap: 2, overflowX: 'auto', pb: 1 }}>
-                            {project.images.map((img, index) => (
+                            {images.map((img, index) => (
                                 <Box
                                     key={index}
                                     component="img"
                                     src={baseImg + img}
+                                    alt={`Miniatura ${index + 1} de ${project.name}`}
                                     onClick={() => setActiveImage(index)}
                                     sx={{
                                         width: '80px',
@@ -101,6 +169,7 @@ export const ProjectModal = ({ project, open, handleClose }) => {
                             startIcon={<GitHubIcon />}
                             href={project.githubUrl}
                             target="_blank"
+                            rel="noopener noreferrer"
                         >
                             Código
                         </Button>
@@ -112,6 +181,7 @@ export const ProjectModal = ({ project, open, handleClose }) => {
                             startIcon={<LaunchIcon />}
                             href={project.liveUrl}
                             target="_blank"
+                            rel="noopener noreferrer"
                         >
                             Visitar Proyecto
                         </Button>

@@ -1,26 +1,29 @@
-import React, { useMemo, useState } from 'react';
-import { ThemeProvider, createTheme, CssBaseline, Container, Typography, Box, Button, Chip, Grid, Card, CardContent, CardMedia } from '@mui/material';
-import Navbar from './components/Navbar';
-import ContactModal from './components/ContactModal';
-import Home from './pages/Home';
-import { AboutMe } from './pages/AboutMe';
-import { Projects } from './pages/Projects';
-import { Experience } from './pages/Experience';
+import React, { Suspense, useEffect, useMemo, useState } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
+import { SiteLayout } from './layouts/SiteLayout';
+import { REDIRECT_STORAGE_KEY } from './admin/config';
 
-// Personalizamos los colores para que coincidan con tu imagen
+const AdminPage = React.lazy(() =>
+    import('./admin/AdminPage').then((module) => ({ default: module.AdminPage }))
+);
 
 export default function App() {
-  const [isContactOpen, setIsContactOpen] = useState(false);
-
-  // 1. Estado para el modo oscuro (por defecto falso/claro)
   const [darkMode, setDarkMode] = useState(true);
+  const navigate = useNavigate();
 
-  // 2. Función para alternar el tema
   const toggleTheme = () => {
     setDarkMode(!darkMode);
   };
 
-  // 3. Creamos el tema dinámicamente usando useMemo
+  useEffect(() => {
+    const redirect = sessionStorage.getItem(REDIRECT_STORAGE_KEY);
+    if (redirect) {
+      sessionStorage.removeItem(REDIRECT_STORAGE_KEY);
+      navigate(redirect, { replace: true });
+    }
+  }, [navigate]);
+
   const theme = useMemo(
     () =>
       createTheme({
@@ -43,19 +46,22 @@ export default function App() {
       }),
     [darkMode],
   );
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Navbar onOpenContact={() => setIsContactOpen(true)} isDarkMode={darkMode} toggleTheme={toggleTheme} />
-      <ContactModal open={isContactOpen} handleClose={() => setIsContactOpen(false)} />
-      <Home />
-      <AboutMe />
-      <Experience />
-      <Projects />
-      <Box sx={{ bgcolor: '#333333', color: 'white', py: 4, textAlign: 'center' }}>
-        <Typography variant="body2">&copy; {new Date().getFullYear()} José Carlos Machado Hernández. Construido con React y Material UI.</Typography>
-      </Box>
-
+      <Routes>
+        <Route path="/" element={<SiteLayout isDarkMode={darkMode} toggleTheme={toggleTheme} />} />
+        <Route
+          path="/admin"
+          element={
+            <Suspense fallback={<div style={{ minHeight: '100vh' }} />}>
+              <AdminPage />
+            </Suspense>
+          }
+        />
+        <Route path="*" element={<SiteLayout isDarkMode={darkMode} toggleTheme={toggleTheme} />} />
+      </Routes>
     </ThemeProvider>
   );
 }
