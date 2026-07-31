@@ -17,13 +17,12 @@ export const ProjectItem = ({ project, handleOpenModal }) => {
                 boxShadow: 6
             }
         }}>
-            <Box sx={{ overflow: 'hidden' }}>
+            <Box sx={{ position: 'relative', width: '100%', aspectRatio: '16 / 9', overflow: 'hidden', bgcolor: 'background.default' }}>
                 <CardMedia
                     component="img"
-                    height="220"
                     image={baseImg + project.thumbnail}
                     alt={`Portada de ${project.name}`}
-                    sx={{ objectFit: 'cover', transition: 'transform 0.4s ease' }}
+                    sx={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease' }}
                     onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.06)' }}
                     onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)' }}
                 />

@@ -69,7 +69,7 @@ export const ProjectModal = ({ project, open, handleClose }) => {
                                 component="img"
                                 src={baseImg + images[activeImage]}
                                 alt={`Vista de ${project.name}`}
-                                sx={{ width: '100%', height: 'auto', maxHeight: '400px', objectFit: 'cover', borderRadius: 2, boxShadow: 3, display: 'block' }}
+                                sx={{ width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: 2, boxShadow: 3, display: 'block' }}
                             />
 
                             {images.length > 1 && (
@@ -134,7 +134,7 @@ export const ProjectModal = ({ project, open, handleClose }) => {
                                     onClick={() => setActiveImage(index)}
                                     sx={{
                                         width: '80px',
-                                        height: '60px',
+                                        height: '45px',
                                         objectFit: 'cover',
                                         borderRadius: 1,
                                         cursor: 'pointer',
